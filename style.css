@@ -1,0 +1,529 @@
+:root {
+    --primary-color: #4e54c8;
+    --secondary-color: #8f94fb;
+    --accent-color: #ff7e5f;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #333;
+}
+
+/* Gradient Background */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.884);
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    height: 60px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(78, 84, 200, 0.8), rgba(143, 148, 251, 0.8)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+}
+
+.btn-custom:hover {
+    background-color: #ff6a4b;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 126, 95, 0.6);
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.about-img {
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Insurance Types */
+.insurance-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.insurance-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.insurance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.insurance-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.insurance-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.insurance-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+/* Testimonials */
+.testimonial-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+}
+
+.testimonial-rating {
+    color: var(--warning-color);
+    margin-bottom: 10px;
+}
+
+/* Blogs */
+.blog-section {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.blog-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: var(--info-color);
+}
+
+.blog-title {
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* Contact Us */
+.contact-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.contact-info-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.contact-info-card:hover .contact-icon {
+    color: white;
+}
+.contact-info-card:hover a {
+    color: white;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.my-custom-link {
+    color: black;
+    /* Normal state: black text */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.my-custom-link:hover {
+    color: white;
+    /* Hover state: white text */
+}
+
+.form-control {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 70px 0 0;
+}
+
+.footer-logo {
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.footer-links h5 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-links h5:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: -10px;
+    left: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+/* Animations */
+.animate-up-down {
+    animation: upDown 3s infinite alternate;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+}
+
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    /* Makes the element stay in place relative to the viewport */
+    width: 60px;
+    /* Adjust size as needed */
+    height: 60px;
+    /* Adjust size as needed */
+    bottom: 75px;
+    right: 15px;
+    /* Distance from the right of the screen */
+    background-color: #25D366;
+    /* WhatsApp green */
+    color: #FFF;
+    border-radius: 50px;
+    /* Makes it a perfect circle */
+    text-align: center;
+    font-size: 30px;
+    /* Size of the WhatsApp icon */
+    box-shadow: 2px 2px 3px #999;
+    /* Subtle shadow for depth */
+    z-index: 1000;
+    /* Ensures it stays on top of other content */
+    display: flex;
+    /* Use flexbox to center the icon */
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    text-decoration: none;
+    /* Remove underline for anchor tag */
+    transition: background-color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.whatsapp-float:hover {
+    background-color: #1DA851;
+    /* Slightly darker green on hover */
+}
