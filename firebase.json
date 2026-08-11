@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "shreeinstaempire",
     "public": ".",
     "ignore": [
       "firebase.json",
